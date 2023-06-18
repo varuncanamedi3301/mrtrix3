@@ -61,7 +61,7 @@ namespace MR
       else if (start + msize > sbuf.st_size) 
         throw Exception ("file \"" + Entry::name + "\" is smaller than expected");
 
-      bool delayed_writeback = false;
+      bool delayed_writeback = true;
       if (readwrite) {
 
 #ifdef MRTRIX_WINDOWS
